@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cat corpus/* | ./scripts/corpus2train.rb > yomi.train.txt
+#cp yomi.model yomi.model.bak
+#train-kytea -part yomi.train.txt -dict dict/dict.txt -unkbound "~" -model yomi.model
+train-kytea -part yomi.train.txt -dict dict/* -unkbound "~" -model yomi.model
+rm yomi.train.txt

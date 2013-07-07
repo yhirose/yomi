@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+./scripts/gen_html.rb | ./scripts/yomi -html yomi.model
